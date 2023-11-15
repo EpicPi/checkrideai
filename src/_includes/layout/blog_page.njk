@@ -1,0 +1,67 @@
+---
+layout: layout/base.njk
+title: Some Title
+date: yyyy-mm-dd
+reading_time: x minutes
+tags: post
+---
+
+<div
+  class="wp-block-group has-global-padding is-layout-constrained wp-container-18 wp-block-group-is-layout-constrained"
+  style="padding-right: 20px; padding-left: 20px"
+>
+  <div
+    class="wp-block-group alignfull gapless-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
+    style="
+      padding-top: var(--wp--preset--spacing--50);
+      padding-right: var(--wp--preset--spacing--50);
+      padding-bottom: var(--wp--preset--spacing--50);
+      padding-left: var(--wp--preset--spacing--50);
+    "
+  >
+    <div
+      class="wp-block-group alignwide is-content-justification-center is-layout-flex wp-container-14 wp-block-group-is-layout-flex"
+      style="justify-content: center"
+    >
+      <div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
+        <h2
+          class="has-text-align-center wp-block-post-title has-x-large-font-size"
+        >
+          {{ title }}
+        </h2>
+
+        <div class="wp-block-template-part">
+          <div
+            class="wp-block-group has-global-padding is-layout-constrained wp-container-12 wp-block-group-is-layout-constrained"
+          >
+            <div
+              class="wp-block-group is-content-justification-center is-layout-flex wp-container-11 wp-block-group-is-layout-flex"
+            >
+              <div
+                style="text-transform: none; letter-spacing: 0px"
+                class="wp-block-post-date"
+              >
+                <time>{{ display_date }}</time>
+              </div>
+
+              <div class="wp-block-post-time-to-read">{{ reading_time }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
+      <div
+        class="entry-content wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained"
+      >
+        {{ content | safe }}
+      </div>
+      <div
+        style="height: var(--wp--preset--spacing--80)"
+        aria-hidden="true"
+        class="wp-block-spacer"
+      ></div>
+    </main>
+  </div>
+</div>

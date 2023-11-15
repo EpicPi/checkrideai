@@ -1,0 +1,111 @@
+---
+layout: layout/base.njk
+---
+
+<div
+  class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
+  style="padding-right: 20px; padding-left: 20px"
+>
+  <div
+    class="wp-block-group is-layout-flow wp-block-group-is-layout-flow wp-container-22 is-position-sticky"
+    style="
+      padding-top: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+    "
+  >
+    <div
+      class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
+      style="padding-right: 20px; padding-left: 20px"
+    >
+      <h2
+        class="wp-block-post-title has-x-large-font-size"
+        style="padding-left: var(--wp--preset--spacing--50)"
+      >
+        Blog
+      </h2>
+    </div>
+
+    <main
+      class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
+      style="padding-right: 20px; padding-left: 20px"
+    >
+      <div
+        class="entry-content alignfull wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained"
+      >
+        <div
+          class="wp-block-group alignfull has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
+          style="
+            padding-top: var(--wp--preset--spacing--70);
+            padding-right: var(--wp--preset--spacing--50);
+            padding-bottom: var(--wp--preset--spacing--70);
+            padding-left: var(--wp--preset--spacing--50);
+          "
+        >
+          <div
+            class="wp-block-query is-layout-flow wp-block-query-is-layout-flow"
+          >
+            <ul
+              class="wp-block-post-template is-layout-flow wp-block-post-template-is-layout-flow"
+            >
+              {%- for post in collections.post | reverse -%}
+
+              <li
+                class="wp-block-post post-72 post type-post status-publish format-standard hentry category-uncategorized"
+              >
+                <div
+                  class="wp-block-group has-global-padding is-layout-constrained wp-container-11 wp-block-group-is-layout-constrained"
+                  style="padding-bottom: 3rem"
+                >
+                  <div
+                    class="wp-block-group has-global-padding is-layout-constrained wp-container-10 wp-block-group-is-layout-constrained"
+                  >
+                    <div class="wp-block-post-date">
+                      <time datetime="{{ post.date }}">
+                        {{ post.data.display_date }}
+                      </time>
+                    </div>
+
+                    <h2
+                      style="
+                        font-style: normal;
+                        font-weight: 700;
+                        margin-top: 0;
+                      "
+                      class="has-link-color wp-block-post-title"
+                    >
+                      <a href="{{ post.url }}" target="_self">{{
+                        post.data.title
+                      }}</a>
+                    </h2>
+                  </div>
+
+                  <div class="wp-block-post-excerpt">
+                    <p class="wp-block-post-excerpt__excerpt">
+                      {{ post.data.short }}
+                    </p>
+                    <p class="wp-block-post-excerpt__more-text">
+                      <a
+                        class="wp-block-post-excerpt__more-link"
+                        href="{{ post.url }}"
+                        >Read more</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="height: var(--wp--preset--spacing--80)"
+        aria-hidden="true"
+        class="wp-block-spacer"
+      ></div>
+    </main>
+  </div>
+</div>
