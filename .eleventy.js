@@ -2,9 +2,10 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+  eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   return {
-    pathPrefix: "/checkrideai-web/",
+    pathPrefix: "/",
     dir: {
       input: "src",
       output: "dist",
