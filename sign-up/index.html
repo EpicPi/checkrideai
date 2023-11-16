@@ -238,18 +238,13 @@
       padding-right: 20px;
       padding-bottom: 20px;
       padding-left: 20px;
+      max-width: 700px;
     "
   >
     <div
       class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
       style="padding-right: 20px; padding-left: 20px"
     >
-      <div
-        style="height: var(--wp--preset--spacing--80)"
-        aria-hidden="true"
-        class="wp-block-spacer"
-      ></div>
-
       <h2 class="wp-block-post-title has-x-large-font-size">Sign up</h2>
     </div>
 
@@ -259,6 +254,7 @@
     >
       <div
         class="entry-content alignfull wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained"
+        style=""
       >
         <p>
           Checkride AI is currently in early access, and we&#8217;re excited for
@@ -271,139 +267,40 @@
           started.
         </p>
 
-        <div
-          data-test="contact-form"
-          id="contact-form-56"
-          class="wp-block-jetpack-contact-form-container"
-        >
-          <form
-            action="https://checkrideai.com/sign-up/#contact-form-56"
-            method="post"
-            class="contact-form commentsblock wp-block-jetpack-contact-form"
-          >
-            <script>
-              (function () {
-                const contact_forms =
-                  document.getElementsByClassName("contact-form");
-
-                for (const form of contact_forms) {
-                  form.onsubmit = function () {
-                    const buttons = form.getElementsByTagName("button");
-
-                    for (const button of buttons) {
-                      button.setAttribute("disabled", true);
-                    }
-                  };
-                }
-              })();
-            </script>
-            <div
-              class="wp-block-jetpack-contact-form"
-              style="
-                padding-top: 16px;
-                padding-right: 16px;
-                padding-bottom: 16px;
-                padding-left: 16px;
-              "
-            >
-              <div class="grunion-field-name-wrap grunion-field-wrap">
-                <label for="g56-name" class="grunion-field-label name"
-                  >Name
-                  <span class="grunion-label-required">(required)</span></label
-                >
-                <input
-                  type="text"
-                  name="g56-name"
-                  id="g56-name"
-                  value=""
-                  class="name grunion-field"
-                  required
-                  aria-required="true"
-                />
-              </div>
-
-              <div class="grunion-field-email-wrap grunion-field-wrap">
-                <label for="g56-email" class="grunion-field-label email"
-                  >Email
-                  <span class="grunion-label-required">(required)</span></label
-                >
-                <input
-                  type="email"
-                  name="g56-email"
-                  id="g56-email"
-                  value=""
-                  class="email grunion-field"
-                  required
-                  aria-required="true"
-                />
-              </div>
-
-              <div
-                class="grunion-field-select-wrap grunion-field-wrap contact-form-dropdown-wrap ui-front"
-              >
-                <label
-                  for="g56-howdidyouhearaboutus"
-                  class="grunion-field-label select"
-                  >How did you hear about us?</label
-                >
-                <select
-                  name="g56-howdidyouhearaboutus"
-                  id="g56-howdidyouhearaboutus-button"
-                  class="select grunion-field ui-selectmenu-button contact-form-dropdown__button ui-selectmenu-button-closed ui-corner-all ui-button ui-widget"
-                  tabindex="-1"
-                >
-                  <option value="">Select one option</option>
-                  <option value="Google">Google</option>
-                  <option value="Friend / acquaintance">
-                    Friend / acquaintance
-                  </option>
-                  <option value="Flight instructor">Flight instructor</option>
-                  <option value="Flight school">Flight school</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-
-              <div class="wp-block-jetpack-button wp-block-button">
-                <button
-                  class="wp-block-button__link"
-                  data-id-attr="placeholder"
-                  type="submit"
-                >
-                  Sign up
-                </button>
-              </div>
-            </div>
-            <input type="hidden" name="contact-form-id" value="56" />
-            <input type="hidden" name="action" value="grunion-contact-form" />
-            <input
-              type="hidden"
-              name="contact-form-hash"
-              value="687a2778fb2c96307eaef36ef6b35acc00e785d8"
-            />
-            <p style="display: none !important">
-              <label
-                >&#916;<textarea
-                  name="ak_hp_textarea"
-                  cols="45"
-                  rows="8"
-                  maxlength="100"
-                ></textarea></label
-              ><input type="hidden" id="ak_js_1" name="ak_js" value="168" />
-              <script>
-                document
-                  .getElementById("ak_js_1")
-                  .setAttribute("value", new Date().getTime());
-              </script>
-            </p>
-          </form>
+        <div>
+          <iframe
+            data-tally-src="https://tally.so/embed/mRDo0K?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            loading="lazy"
+            width="100%"
+            height="384"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="Sign Up "
+          ></iframe>
+          <script>
+            var d = document,
+              w = "https://tally.so/widgets/embed.js",
+              v = function () {
+                "undefined" != typeof Tally
+                  ? Tally.loadEmbeds()
+                  : d
+                      .querySelectorAll("iframe[data-tally-src]:not([src])")
+                      .forEach(function (e) {
+                        e.src = e.dataset.tallySrc;
+                      });
+              };
+            if ("undefined" != typeof Tally) v();
+            else if (d.querySelector('script[src="' + w + '"]') == null) {
+              var s = d.createElement("script");
+              (s.src = w),
+                (s.onload = v),
+                (s.onerror = v),
+                d.body.appendChild(s);
+            }
+          </script>
         </div>
       </div>
-
-      <div
-        style="height: var(--wp--preset--spacing--80)"
-        aria-hidden="true"
-        class="wp-block-spacer"
-      ></div>
     </main>
   </div>
 </div>
