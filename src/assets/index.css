@@ -5173,3 +5173,45 @@ html :where(.is-position-sticky) {
 .wp-block-post-time-to-read {
   font-size: 0.8rem;
 }
+
+ul.checkmark-list {
+  list-style: none;
+}
+
+ul.checkmark-list li:before {
+  content: '✓ '; 
+}
+
+.video-container-desktop, .video-container-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+/* Hide the mobile video container by default */
+.video-container-mobile {
+  display: none;
+  text-align: center;
+}
+
+/* Style for normal screen video */
+.video-container-desktop video {
+  width: 70%;
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 600px) {
+  /* Hide the desktop video */
+  .video-container-desktop {
+      display: none;
+      margin: auto;
+  }
+
+  /* Show the mobile video */
+  .video-container-mobile {
+      display: block;
+  }
+}
